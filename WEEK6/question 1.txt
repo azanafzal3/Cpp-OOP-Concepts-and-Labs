@@ -1,0 +1,110 @@
+//Question 1
+#include<iostream>
+#include<string>
+using namespace std;
+class Student {
+private:
+	string rollNum;
+	string name;
+	int age;
+	double cgpa;
+
+public:
+	//constructor
+	Student()
+	{
+	    rollNum="Null";
+		name="Null";
+		age=0;
+		cgpa=0;
+	}
+
+	//setter getters
+	void setrollNum(string r)
+	{
+		rollNum = r;
+	}
+
+	string getrollNum()
+	{
+		return rollNum;
+	}
+
+	void setname(string n)
+	{
+		name = n;
+	}
+
+	string getname()
+	{
+		return name;
+	}
+
+	void setage(int a)
+	{
+		age = a;
+	}
+
+	int getage()
+	{
+		return age;
+	}
+
+	void setcgpa(double gpa)
+	{
+		cgpa = gpa;
+	}
+
+	double getcgpa()
+	{
+		return cgpa;
+	}
+
+	//functions
+	void InputValues()
+	{
+		Student s;
+		string a;
+		string b;
+		int c=0;
+		double d=0;
+
+
+		cout << "PLEASE ENTER THE REGISTRATION NUMBER: ";
+		cin >> a;
+		s.setrollNum(a);
+
+		
+		cout << "PLEASE ENTER THE NAME OF THE STUDENT: ";
+		cin >> b;
+		s.setname(b);
+
+		
+		cout << "PLEASE ENTER THE AGE OF THE STUDENT: ";
+		cin >> c;
+		s.setage(c);
+
+		
+		cout << "PLEASE ENTER CGPA OF THE STUDENT: ";
+		cin >> d;
+		s.setcgpa(d);
+
+
+		cout << "REGISTRATIN NUMBER: " << s.getrollNum() << endl;
+		cout << "NAME: " << s.getname() << endl;
+		cout << "AGE: " << s.getage() << endl;
+		cout << "CGPA: " << s.getcgpa() << endl;
+	}
+
+};
+
+int main()
+{
+	Student a;
+	a.InputValues();
+	system("pause");
+	return 0;
+}
+
+
+

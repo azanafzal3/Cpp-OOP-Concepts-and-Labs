@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+int* inputData2D(int** p1, int row, int col)
+{
+    cout << "Enter elements: " << endl;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << "Index " << i << "," << j<< " : ";
+
+            cin >> p1[i][j];
+        }
+
+    }
+
+    cout << "Stored Data: " << endl;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << p1[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+
+}
+
+int* inputData3D(int*** p1, int x, int y, int z)
+{
+    cout << "Enter elements: " << endl;
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            for (int k = 0; k < z; k++)
+            {
+                cout << "Index " << i << "," << j << "," << k << " : ";
+                cin >> p1[i][j][k];
+            }
+        }
+
+    }
+
+    cout << "Stored Data: " << endl;
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            for (int k = 0; k < z; k++)
+            {
+                cout << p1[i][j][k] << " ";
+            }
+            cout << "\t\n";
+        }
+            cout << endl;
+    }
+    return 0;
+
+}
+
+int main()
+{
+    int** ptr1 = new int* [4];
+    for (int i = 0; i < 4; i++) {
+
+        ptr1[i] = new int[4];
+
+    }
+
+    int*** ptr2 = new int** [4];
+    for (int i = 0; i < 4; i++) {
+
+        ptr2[i] = new int*[5];
+        for (int j = 0; j < 5; j++) {
+
+            ptr2[i][j] = new int[6];
+
+        }
+    }
+  
+    inputData2D(ptr1, 4, 4);
+    inputData3D(ptr2, 4, 5, 6);
+
+}
+
